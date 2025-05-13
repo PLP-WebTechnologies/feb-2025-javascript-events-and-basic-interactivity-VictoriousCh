@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced HTML5 Elements and Forms</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#ordered-list">List</a></li>
+        <li><a href="#slideshow">Slideshow</a></li>
+        <li><a href="#tabs">Tabs</a></li>
+        <li><a href="#contacts-table">Contacts</a></li>
+        <li><a href="#registration-form">Register</a></li>
+        <li><a href="#multimedia">Multimedia</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <h1>Advanced HTML5 Elements and Forms</h1>
+    </header>
+
+    <main class="container">
+      <section id="ordered-list" class="hovered-section">
+        <h2>Interactive List</h2>
+        <p id="dynamic-text">Click the button or double-click this text!</p>
+        <input
+          type="text"
+          id="keypress-input"
+          placeholder="Type here for keypress detection"
+        />
+        <button id="change-text-btn">Change Text/Color</button>
+        <button id="toggle-style-btn">Toggle Style</button>
+        <button id="add-item-btn">Add List Item</button>
+        <button id="remove-item-btn">Remove List Item</button>
+        <ol id="dynamic-list">
+          <li>First item</li>
+          <li>Second item</li>
+          <li>Third item</li>
+        </ol>
+      </section>
+
+      <section id="slideshow" class="hovered-section">
+        <h2>Image Slideshow</h2>
+        <div class="slideshow-container">
+          <div class="slide active">
+            <img
+              src="https://via.placeholder.com/600x400/FF5733/FFFFFF"
+              alt="Slide 1"
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="https://via.placeholder.com/600x400/33FF57/FFFFFF"
+              alt="Slide 2"
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="https://via.placeholder.com/600x400/3357FF/FFFFFF"
+              alt="Slide 3"
+            />
+          </div>
+          <button class="prev">❮</button>
+          <button class="next">❯</button>
+        </div>
+      </section>
+
+      <section id="tabs" class="hovered-section">
+        <h2>Tabs</h2>
+        <div class="tab-buttons">
+          <button class="tab-btn active" data-tab="tab1">Tab 1</button>
+          <button class="tab-btn" data-tab="tab2">Tab 2</button>
+          <button class="tab-btn" data-tab="tab3">Tab 3</button>
+        </div>
+        <div class="tab-content">
+          <div id="tab1" class="tab-pane active">
+            <p>Content for Tab 1: This is the first tab's content.</p>
+          </div>
+          <div id="tab2" class="tab-pane">
+            <p>Content for Tab 2: This is the second tab's content.</p>
+          </div>
+          <div id="tab3" class="tab-pane">
+            <p>Content for Tab 3: This is the third tab's content.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacts-table" class="hovered-section">
+        <h2>Contacts Table</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Address</th>
+              <th>Mobile</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Name">John Doe</td>
+              <td data-label="Address">123 Main St, Cityville</td>
+              <td data-label="Mobile">123-456-7890</td>
+              <td data-label="Email">[email protected]</td>
+            </tr>
+            <tr>
+              <td data-label="Name">Jane Smith</td>
+              <td data-label="Address">456 Oak Ave, Townsville</td>
+              <td data-label="Mobile">234-567-8901</td>
+              <td data-label="Email">[email protected]</td>
+            </tr>
+            <tr>
+              <td data-label="Name">Robert Brown</td>
+              <td data-label="Address">789 Pine Rd, Village</td>
+              <td data-label="Mobile">345-678-9012</td>
+              <td data-label="Email">[email protected]</td>
+            </tr>
+            <tr>
+              <td data-label="Name">Emily White</td>
+              <td data-label="Address">321 Cedar Blvd, Metropolis</td>
+              <td data-label="Mobile">456-789-0123</td>
+              <td data-label="Email">[email protected]</td>
+            </tr>
+            <tr>
+              <td data-label="Name">Michael Green</td>
+              <td data-label="Address">654 Spruce Ln, Hamlet</td>
+              <td data-label="Mobile">567-890-1234</td>
+              <td data-label="Email">[email protected]</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="registration-form" class="hovered-section">
+        <h2>Registration Form</h2>
+        <form id="reg-form" novalidate>
+          <fieldset>
+            <legend>Register Here</legend>
+
+            <div>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required />
+              <span class="error" id="name-error"></span>
+            </div>
+
+            <div>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+              <span class="error" id="email-error"></span>
+            </div>
+
+            <div>
+              <label for="password">Password:</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                minlength="8"
+              />
+              <span class="error" id="password-error"></span>
+            </div>
+
+            <div>
+              <label for="dob">Date of Birth:</label>
+              <input type="date" id="dob" name="dob" />
+            </div>
+
+            <div>
+              <label for="country">Country:</label>
+              <select id="country" name="country">
+                <option value="">Select your country</option>
+                <option value="usa">USA</option>
+                <option value="canada">Canada</option>
+                <option value="uk">UK</option>
+              </select>
+            </div>
+
+            <div>
+              <label>Gender:</label>
+              <input type="radio" id="male" name="gender" value="male" />
+              <label for="male">Male</label>
+              <input type="radio" id="female" name="gender" value="female" />
+              <label for="female">Female</label>
+              <input type="radio" id="other" name="gender" value="other" />
+              <label for="other">Other</label>
+            </div>
+
+            <div>
+              <label>Interests:</label>
+              <input
+                type="checkbox"
+                id="coding"
+                name="interests"
+                value="coding"
+              />
+              <label for="coding">Coding</label>
+              <input
+                type="checkbox"
+                id="music"
+                name="interests"
+                value="music"
+              />
+              <label for="music">Music</label>
+              <input
+                type="checkbox"
+                id="sports"
+                name="interests"
+                value="sports"
+              />
+              <label for="sports">Sports</label>
+            </div>
+
+            <button type="submit">Register</button>
+          </fieldset>
+        </form>
+      </section>
+
+      <section id="multimedia" class="hovered-section">
+        <h2>Multimedia</h2>
+        <h3>Audio Example</h3>
+        <audio controls>
+          <source src="sample-audio.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+
+        <h3>Video Example</h3>
+        <video controls width="600">
+          <source src="sample-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Advanced HTML5 Elements and Forms</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

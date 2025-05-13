@@ -1,0 +1,429 @@
+/* General Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #2c3e50;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Header Styling */
+header {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-family: "Georgia", serif;
+  font-size: 2.5em;
+}
+
+/* Main Content with Flexbox */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  flex: 1;
+  justify-content: center;
+}
+
+/* Section Styling */
+section {
+  flex: 1 1 300px;
+  margin: 10px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  min-width: 280px;
+}
+
+/* Ordered List Section */
+#ordered-list button,
+#ordered-list input {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  margin: 10px 5px;
+  font-size: 0.9em;
+}
+
+#ordered-list input {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #2c3e50;
+}
+
+#ordered-list button:hover,
+#ordered-list input:hover {
+  background-color: #34495e;
+}
+
+#ordered-list ol {
+  padding-left: 40px;
+  font-size: 1.1em;
+}
+
+/* Slideshow Styling */
+.slideshow-container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.slide {
+  display: none;
+}
+
+.slide.active {
+  display: block;
+  animation: fade 0.5s ease-in-out;
+}
+
+.slide img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Tabs Styling */
+.tab-buttons {
+  display: flex;
+  border-bottom: 2px solid #2c3e50;
+  margin-bottom: 10px;
+}
+
+.tab-btn {
+  background-color: #f1f1f1;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-right: 5px;
+  border-radius: 4px 4px 0 0;
+}
+
+.tab-btn.active {
+  background-color: #2c3e50;
+  color: #fff;
+}
+
+.tab-btn:hover {
+  background-color: #34495e;
+  color: #fff;
+}
+
+.tab-content {
+  padding: 10px;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+  animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* External Image */
+#external-image img {
+  border: 3px solid #2c3e50;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* Table Styling */
+#contacts-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+#contacts-table th,
+#contacts-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+#contacts-table th {
+  background-color: #2c3e50;
+  color: #fff;
+}
+
+#contacts-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Form Styling */
+#registration-form form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#registration-form fieldset {
+  border: 2px solid #2c3e50;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+#registration-form legend {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#registration-form div {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#registration-form label {
+  width: 120px;
+  font-weight: bold;
+}
+
+#registration-form input,
+#registration-form select {
+  padding: 8px;
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+  min-width: 150px;
+}
+
+#registration-form button {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  display: block;
+  margin: 20px auto 0;
+}
+
+#registration-form button:hover {
+  background-color: #34495e;
+}
+
+#registration-form .error {
+  color: #e74c3c;
+  font-size: 0.9em;
+  margin-left: 130px;
+}
+
+/* Multimedia Styling */
+#multimedia audio,
+#multimedia video {
+  display: block;
+  margin: 10px auto;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  max-width: 100%;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #2c3e50;
+  color: #fff;
+  border-radius: 8px;
+}
+
+/* Class for Hover Effects */
+.hovered-section:hover {
+  background-color: #e8ecef;
+  transition: background-color 0.3s ease;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  section {
+    flex: 1 1 100%;
+    margin: 10px 0;
+  }
+
+  #registration-form label {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  #registration-form input,
+  #registration-form select {
+    width: 100%;
+  }
+
+  #registration-form .error {
+    margin-left: 0;
+  }
+
+  .tab-buttons {
+    flex-direction: column;
+  }
+
+  .tab-btn {
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  #contacts-table table,
+  #contacts-table thead,
+  #contacts-table tbody,
+  #contacts-table th,
+  #contacts-table td,
+  #contacts-table tr {
+    display: block;
+  }
+
+  #contacts-table th {
+    display: none;
+  }
+
+  #contacts-table td {
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+  }
+
+  #contacts-table td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 12px;
+    width: 45%;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  #contacts-table td:nth-child(1):before {
+    content: "Name";
+  }
+  #contacts-table td:nth-child(2):before {
+    content: "Address";
+  }
+  #contacts-table td:nth-child(3):before {
+    content: "Mobile";
+  }
+  #contacts-table td:nth-child(4):before {
+    content: "Email";
+  }
+}
